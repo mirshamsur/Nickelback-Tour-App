@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script language="javascript">
+<!--
+/*
+<body>
+</body>
+</html>
+*/
+-->
+</script> 
+    <style type="text/css">
+      html, body, #map-canvas { height: 90%; margin: 0; padding: 0;}
+    </style>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body style="background-color: lightcoral;">
+<div id="map-canvas"></div>
+
+<div id="results"></div>
+
+<script type="template" id="page-template"> <!--//dont put text/javascript put template-->
+
+<h3 id="title""><a href="{{url}}">{{title}}</a> </h3>
+{{#if description}}
+<p>{{{description}}}</p>
+{{else}}
+<p>No description available. </p>
+{{/if}}
+<p id="venue">{{venue_address}}, {{city_name}} {{country_name}}</p>
+{{#if image.medium.url}}
+<img src="{{image.medium.url}}"/>
+{{else}}
+<p>No photo available.</p>
+{{/if}}
+<!--{{#if synopsis}}-->
+<!--<p>{{synopsis}}</p>-->
+<!--{{else}}-->
+<!--<p>No synopsis available. </p>-->
+<!--{{/if}}-->
+
+</script> <!--making the template-->
+<script type="text/javascript" src="handlebars.js"></script>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc">
+</script>
+<!--<script type="text/javascript" src="http://api.eventful.com/json/events/search?c=music&app_key=c4dpFpD3Z6wJHPVG&page_number=1&date=Future&keywords=Ariana+Grande&callback=processJSONP"></script>-->
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+
+<script type="text/javascript" src="map.js"></script>
+<script type="text/javascript" src="events.js"></script>
+
+
+  </body>
+</html>

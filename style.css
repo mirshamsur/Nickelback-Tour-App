@@ -1,0 +1,14 @@
+
+#results{
+    white-space: wrap;
+    margin-left: 100px;
+    width: 500px;
+    max-width: 600px;
+    text-align: center;
+}
+#page-template{
+    width: 500px;
+}
+#block p{
+    width: 500px;
+}
